@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { CSSProperties } from 'react';
 
 export default function NotFound() {
   return (
@@ -12,17 +13,17 @@ export default function NotFound() {
   );
 }
 
-const styles = {
+const styles: Record<string, CSSProperties> = {
   container: {
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'column' as const,
     justifyContent: 'center',
     alignItems: 'center',
     height: '100vh',
     backgroundColor: 'white',
     color: 'black',
     fontFamily: 'Arial, sans-serif',
-    textAlign: 'center',
+    textAlign: 'center' as const,
   },
   titleCode: {
     fontSize: '6rem',
@@ -30,7 +31,7 @@ const styles = {
     color: 'black',
   },
   zeroStyle: {
-   color: '#6366f1',
+    color: '#6366f1',
   },
   message: {
     fontSize: '1.5rem',
