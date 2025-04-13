@@ -2,6 +2,7 @@ import './globals.css';
 import Navbar from './partials/Navbar';
 import Footer from './partials/Footer';
 import Head from "next/head";
+import { ReactNode } from 'react';
 
 import MobileNavClient from './handling/MobileNavClient';
 
@@ -12,15 +13,15 @@ export const metadata = {
     icons: {
       icon: "/logo.png",
     },
-    },
+  },
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="id">
       <Head>
-  <link rel="icon" href="/logo.png" />
-</Head>
+        <link rel="icon" href="/logo.png" />
+      </Head>
       <body>
         <Navbar />
         <MobileNavClient />
